@@ -1,0 +1,356 @@
+/* Styling untuk keseluruhan halaman - Tema SPIDER-MAN Matte */
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 50%, #1f1f1f 100%);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efek web pattern di background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, 
+            rgba(255, 255, 255, 0.02) 0px, 
+            rgba(255, 255, 255, 0.02) 2px,
+            transparent 2px, 
+            transparent 8px),
+        repeating-linear-gradient(-45deg, 
+            rgba(255, 255, 255, 0.02) 0px, 
+            rgba(255, 255, 255, 0.02) 2px,
+            transparent 2px, 
+            transparent 8px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Pattern laba-laba di background */
+body::after {
+    content: "🕷️";
+    position: fixed;
+    font-size: 200px;
+    opacity: 0.03;
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(-15deg);
+    color: #8b0000;
+    z-index: 0;
+}
+
+/* Container utama - Seperti bangunan NYC */
+.card {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #2a2a2a;
+    padding: 30px;
+    border: 2px solid #8b0000;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 0 1px #404040 inset;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Efek seperti jaring laba-laba di pojok card */
+.card::before {
+    content: "🕸️";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 60px;
+    opacity: 0.2;
+    transform: rotate(15deg);
+    color: #666;
+    z-index: -1;
+}
+
+/* Efek laba-laba kecil */
+.card::after {
+    content: "🕷️";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    opacity: 0.5;
+    color: #8b0000;
+    animation: crawl 8s linear infinite;
+}
+
+@keyframes crawl {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+    25% { transform: translate(-10px, -5px) rotate(10deg); opacity: 0.6; }
+    50% { transform: translate(-20px, -10px) rotate(20deg); opacity: 0.3; }
+    75% { transform: translate(-10px, -5px) rotate(10deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+}
+
+/* Header utama - Gaya Spider-Man */
+h1 {
+    color: #8b0000;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 0 #1a1a1a, 4px 4px 0 #404040;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+}
+
+/* Garis bawah seperti jaring laba-laba */
+h1::after {
+    content: "⌇⌇⌇⌇⌇⌇⌇⌇⌇⌇";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8b0000;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    opacity: 0.7;
+}
+
+/* Tambahan logo Marvel */
+h1::before {
+    content: "⚡ MARVEL ⚡";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 3px;
+    background: #1a1a1a;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #8b0000;
+    white-space: nowrap;
+}
+
+/* Paragraf - Gaya komik Marvel */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #c0c0c0;
+    padding: 18px 22px;
+    background: #1f1f1f;
+    border-left: 4px solid #8b0000;
+    border-radius: 0 12px 12px 0;
+    margin: 20px 0;
+    box-shadow: 5px 5px 0 #0a0a0a;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    border-left-width: 8px;
+    background: #252525;
+    transform: translateX(5px);
+}
+
+/* Efek laba-laba kecil di paragraf */
+p::after {
+    content: "🕷️";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 14px;
+    opacity: 0.3;
+    color: #8b0000;
+}
+
+/* Garis pemisah - Seperti tali jaring */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8b0000, #404040, #8b0000, transparent);
+    margin: 30px 0;
+    position: relative;
+    border-radius: 3px;
+}
+
+/* Elemen jaring di tengah hr */
+hr::before {
+    content: "🕸️";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2a2a2a;
+    color: #8b0000;
+    padding: 0 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* Greeting - Seperti kartu identitas peter parker */
+small {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-style: normal;
+    text-align: center;
+    color: #a0a0a0;
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: #1a1a1a;
+    border: 2px dotted #8b0000;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+small:hover {
+    background: #202020;
+    border-style: solid;
+    color: #8b0000;
+}
+
+/* Efek kamera jameson */
+small::before {
+    content: "📸";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+/* Quote khas spider-man */
+small::after {
+    content: "› With great power... ‹";
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* Elemen tambahan - Siluet Spider-Man */
+.spider-silhouette {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 80px;
+    color: #8b0000;
+    opacity: 0.1;
+    transform: scaleX(-1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Style untuk button - Seperti di komik */
+button, .button {
+    background: #1f1f1f;
+    border: 2px solid #8b0000;
+    color: #c0c0c0;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 0 #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover, .button:hover {
+    background: #8b0000;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #4a0000;
+}
+
+/* Efek jaring saat hover */
+button:hover::before {
+    content: "🕸️";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+button:hover::after {
+    content: "🕸️";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Efek web swing */
+@keyframes webSwing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+.card:hover {
+    animation: webSwing 0.5s ease;
+}
+
+/* Elemen Marvel Studios */
+.marvel-credit {
+    text-align: center;
+    font-size: 10px;
+    color: #404040;
+    margin-top: 15px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    border-top: 1px dashed #333;
+    padding-top: 10px;
+}
+
+.marvel-credit::before {
+    content: "✦";
+    margin: 0 5px;
+    color: #8b0000;
+}
+
+.marvel-credit::after {
+    content: "✦";
+    margin: 0 5px;
+    color: #8b0000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+    
+    h1::before {
+        font-size: 10px;
+        top: -25px;
+    }
+}
