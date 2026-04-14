@@ -46,7 +46,7 @@ export default function Sidebar() {
                             </span>
                         </div>
                     </div>
-                    <img className="w-20 rounded-full ml-2" src="https://avatar.iran.liara.run/public/28" alt="footer avatar" />
+                    <img className="w-20 rounded-full ml-2" src="/img/image.png" alt="footer avatar" />
                 </div>
                 <span className="font-bold text-gray-400 block">Sedap Restaurant Admin Dashboard</span>
                 <p className="font-light text-gray-400">&copy; 2025 All Right Reserved</p>
