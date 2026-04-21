@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 
-export default function PageHeader() {
+export default function PageHeader(props) {
     // STATE: Untuk memunculkan pop-up modal
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -9,7 +9,7 @@ export default function PageHeader() {
         <div className="flex items-center justify-between p-4 mb-4 relative z-40">
             <div className="flex flex-col">
                 <span className="text-3xl font-semibold text-teks">
-                    Dashboard
+                    {props.title}
                 </span>
                 <div className="flex items-center font-medium space-x-2 mt-1 text-sm text-teks-samping">
                     <span>Dashboard</span>
