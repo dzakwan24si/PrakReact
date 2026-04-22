@@ -52,7 +52,32 @@ export default function Sidebar() {
               <RiCustomerServiceFill className="mr-4 text-xl" /> Customers
             </NavLink>
           </li>
+
+          <div className="my-4 border-t border-gray-200"></div> {/* Garis Pemisah */}
+           <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-4">Test Error Pages</span>
+            <li>
+                <NavLink to="/400" className={menuClass}>
+                    <span className="font-bold text-red-500">⚠</span> Error 400
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/401" className={menuClass}>
+                    <span className="font-bold text-red-500">⚠</span> Error 401
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/403" className={menuClass}>
+                    <span className="font-bold text-red-500">⚠</span> Error 403
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="*" className={menuClass}>
+                    <span className="font-bold text-red-500">⚠</span> Error 404
+                </NavLink>
+            </li>
         </ul>
+
+        <div className="my-4 border-t border-gray-200"></div> {/* Garis Pemisah */}
       </div>
 
       {/* Footer */}

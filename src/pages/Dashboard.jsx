@@ -1,10 +1,24 @@
-import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
+import { FaShoppingCart, FaTruck, FaBan, FaDollarSign, FaPlus } from "react-icons/fa";
+import { useState } from "react";
 import PageHeader from "../components/PageHeader";
+import Modal from "../components/Modal";
 
 export default function Dashboard() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="p-4">
-            <PageHeader title = "Dashboard"/>
+            <PageHeader 
+                title="Dashboard" 
+                breadcrumb={["Home Detail", "Home Very Detail"]}
+            >
+                {/* Tombol ini akan otomatis mengisi props 'children' dan berada di kanan */}
+                <button 
+                    onClick={() => setIsModalOpen(true)}
+                    className="flex items-center bg-hijau text-white px-6 py-2 rounded-lg font-bold shadow-md hover:bg-[#009e68] transition transform hover:-translate-y-0.5"
+                >
+                    <FaPlus className="mr-2" /> Add New Menu
+                </button>
+            </PageHeader>
             
             {/* Bagian Atas: 4 Kartu Statistik */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -97,6 +111,34 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+            {isModalOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fade-in">
+                    <div className="bg-white w-full max-w-md p-6 rounded-2xl shadow-2xl relative">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-2">Tambah Menu Baru</h2>
+                        <p className="text-gray-500 text-sm mb-6">Silakan masukkan detail menu makanan ke dalam sistem.</p>
+                        
+                        <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); }}>
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-1">Nama Menu</label>
+                                <input type="text" className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-hijau/50 bg-gray-50" placeholder="Contoh: Rendang Sapi" required />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-1">Harga</label>
+                                <input type="number" className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-hijau/50 bg-gray-50" placeholder="Contoh: 35000" required />
+                            </div>
+                            
+                            <div className="flex space-x-3 mt-6">
+                                <button type="submit" className="flex-1 bg-hijau text-white font-bold py-3 rounded-lg hover:bg-[#009e68] transition shadow-md">
+                                    Simpan
+                                </button>
+                                <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 bg-gray-200 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-300 transition">
+                                    Batal
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
