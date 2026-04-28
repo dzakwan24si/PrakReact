@@ -1,38 +1,40 @@
-import { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/tailwind.css";
-import Header from "./layouts/Header";
-import Dashboard from "./pages/Dashboard";
-import Customers from "./pages/Customers";
-import Orders from "./pages/Orders";
-import Sidebar from "./layouts/Sidebar";
-import ErrorPage from "./pages/ErrorPage";
+const Dashboard = React.lazy(() => import("./pages/Dashboard"))
+const Header = React.lazy(() => import("./components/Header"))
+const Customers = React.lazy(() => import("./pages/Customers"))
+const Orders = React.lazy(() => import("./pages/Orders"))
+const ErrorPage = React.lazy(() => import("./pages/ErrorPage"))
+const Login = React.lazy(() => import("./pages/auth/Login"))
+const Register = React.lazy(() => import("./pages/auth/Register"))
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"))
+const Sidebar = React.lazy(() => import("./components/Sidebar"))
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
+import Loading from "./components/Loading";
 
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen flex">
-      <div className="flex flex-row flex-1">
-        <Sidebar />
-        <div className="flex-1 flex flex-col overflow-hidden">
-          <Header />
+    <Suspense fallback={<Loading />}>
           <Routes>
+            <Route element={<MainLayout/>}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
-                    
-                    {/* Halaman Error Custom Latihan */}
-                    <Route path="/400" element={<ErrorPage kodeError="400" deskripsiError="Bad Request - Permintaan Tidak Valid" gambarError="https://illustrations.popsy.co/amber/surreal-hourglass.svg" />} />
-                    <Route path="/401" element={<ErrorPage kodeError="401" deskripsiError="Unauthorized - Anda Belum Login" gambarError="https://illustrations.popsy.co/amber/security-check.svg" />} />
-                    <Route path="/403" element={<ErrorPage kodeError="403" deskripsiError="Forbidden - Akses Ditolak" gambarError="https://illustrations.popsy.co/amber/shredder.svg" />} />
-                    
-                    {/* Route "*" artinya jika user mengetik URL ngawur (404 Not Found) */}
-                    <Route path="*" element={<ErrorPage kodeError="404" deskripsiError="Page Not Found - Halaman Tidak Ditemukan" gambarError="https://illustrations.popsy.co/amber/falling.svg" />} />
-                </Routes>
-        </div>
-      </div>
-    </div>
+            <Route path="/400" element={<ErrorPage kodeError="400" deskripsiError="Bad Request - Permintaan Tidak Valid"  />} />
+            <Route path="/401" element={<ErrorPage kodeError="401" deskripsiError="Unauthorized - Anda Belum Login"  />} />
+            <Route path="/403" element={<ErrorPage kodeError="403" deskripsiError="Forbidden - Akses Ditolak"/>} />
+            <Route path="*" element={<ErrorPage kodeError="404" deskripsiError="Page Not Found - Halaman Tidak Ditemukan"/>} />
+            </Route>
+            <Route element={<AuthLayout/>}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="/forgot" element={<Forgot/>} />
+            </Route>
+          </Routes>
+          </Suspense>
   );
 }
-
 export default App;
