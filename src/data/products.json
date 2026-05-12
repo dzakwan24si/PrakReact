@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "title": "Smartphone Galaxy S23",
+    "code": "SGS23-001",
+    "category": "Elektronik",
+    "brand": "Samsung",
+    "price": 12999000,
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "title": "iPhone 14 Pro",
+    "code": "IP14P-002",
+    "category": "Elektronik",
+    "brand": "Apple",
+    "price": 15999000,
+    "stock": 8
+  },
+  {
+    "id": 3,
+    "title": "Laptop Asus ROG Zephyrus",
+    "code": "ASROG-003",
+    "category": "Komputer",
+    "brand": "Asus",
+    "price": 24999000,
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "title": "Mouse Logitech MX Master 3",
+    "code": "LOMX3-004",
+    "category": "Aksesoris",
+    "brand": "Logitech",
+    "price": 1250000,
+    "stock": 30
+  },
+  {
+    "id": 5,
+    "title": "Keyboard Mechanical Keychron K2",
+    "code": "KK2-005",
+    "category": "Aksesoris",
+    "brand": "Keychron",
+    "price": 899000,
+    "stock": 20
+  },
+  {
+    "id": 6,
+    "title": "Monitor Samsung 27 inch 4K",
+    "code": "SAM27-006",
+    "category": "Elektronik",
+    "brand": "Samsung",
+    "price": 5499000,
+    "stock": 7
+  },
+  {
+    "id": 7,
+    "title": "Headphone Sony WH-1000XM5",
+    "code": "SONYX5-007",
+    "category": "Audio",
+    "brand": "Sony",
+    "price": 3999000,
+    "stock": 12
+  },
+  {
+    "id": 8,
+    "title": "Smartwatch Apple Watch Series 8",
+    "code": "APW8-008",
+    "category": "Wearable",
+    "brand": "Apple",
+    "price": 6999000,
+    "stock": 6
+  },
+  {
+    "id": 9,
+    "title": "Speaker JBL Charge 5",
+    "code": "JBL5-009",
+    "category": "Audio",
+    "brand": "JBL",
+    "price": 1799000,
+    "stock": 18
+  },
+  {
+    "id": 10,
+    "title": "Tablet iPad Air 2022",
+    "code": "IPAD-010",
+    "category": "Elektronik",
+    "brand": "Apple",
+    "price": 8799000,
+    "stock": 4
+  },
+  {
+    "id": 11,
+    "title": "Kamera Mirrorless Sony A7IV",
+    "code": "SONYA7-011",
+    "category": "Fotografi",
+    "brand": "Sony",
+    "price": 32999000,
+    "stock": 3
+  },
+  {
+    "id": 12,
+    "title": "TV LG OLED 55 inch",
+    "code": "LG55-012",
+    "category": "Elektronik",
+    "brand": "LG",
+    "price": 17999000,
+    "stock": 5
+  },
+  {
+    "id": 13,
+    "title": "Kipas Angin Miyako 16 inch",
+    "code": "MIY16-013",
+    "category": "Rumah Tangga",
+    "brand": "Miyako",
+    "price": 459000,
+    "stock": 50
+  },
+  {
+    "id": 14,
+    "title": "Rice Cooker Philips HD4515",
+    "code": "PHIL-014",
+    "category": "Rumah Tangga",
+    "brand": "Philips",
+    "price": 899000,
+    "stock": 25
+  },
+  {
+    "id": 15,
+    "title": "Vacuum Cleaner Dyson V15",
+    "code": "DYV15-015",
+    "category": "Rumah Tangga",
+    "brand": "Dyson",
+    "price": 7999000,
+    "stock": 7
+  },
+  {
+    "id": 16,
+    "title": "Power Bank Anker 20000mAh",
+    "code": "ANK20-016",
+    "category": "Aksesoris",
+    "brand": "Anker",
+    "price": 599000,
+    "stock": 40
+  },
+  {
+    "id": 17,
+    "title": "Charger USB-C GaN 65W",
+    "code": "GAN65-017",
+    "category": "Aksesoris",
+    "brand": "Baseus",
+    "price": 399000,
+    "stock": 35
+  },
+  {
+    "id": 18,
+    "title": "Microphone Blue Yeti USB",
+    "code": "BLYETI-018",
+    "category": "Audio",
+    "brand": "Blue",
+    "price": 1999000,
+    "stock": 10
+  },
+  {
+    "id": 19,
+    "title": "Router TP-Link Archer AX50",
+    "code": "TPAX50-019",
+    "category": "Jaringan",
+    "brand": "TP-Link",
+    "price": 899000,
+    "stock": 14
+  },
+  {
+    "id": 20,
+    "title": "SSD External 1TB SanDisk",
+    "code": "SD1TB-020",
+    "category": "Komputer",
+    "brand": "SanDisk",
+    "price": 1599000,
+    "stock": 22
+  },
+  {
+    "id": 21,
+    "title": "Printer Epson L3210",
+    "code": "EPSL3-021",
+    "category": "Komputer",
+    "brand": "Epson",
+    "price": 2499000,
+    "stock": 9
+  },
+  {
+    "id": 22,
+    "title": "Proyektor Epson EpiqVision",
+    "code": "EPIQ-022",
+    "category": "Elektronik",
+    "brand": "Epson",
+    "price": 8999000,
+    "stock": 4
+  },
+  {
+    "id": 23,
+    "title": "Smart TV Xiaomi P1 43 inch",
+    "code": "XIA43-023",
+    "category": "Elektronik",
+    "brand": "Xiaomi",
+    "price": 3999000,
+    "stock": 11
+  },
+  {
+    "id": 24,
+    "title": "Mesin Cuci Samsung 8kg",
+    "code": "SAM8KG-024",
+    "category": "Rumah Tangga",
+    "brand": "Samsung",
+    "price": 3499000,
+    "stock": 6
+  },
+  {
+    "id": 25,
+    "title": "Kulkas Sharp 2 Pintu",
+    "code": "SHARP2-025",
+    "category": "Rumah Tangga",
+    "brand": "Sharp",
+    "price": 4799000,
+    "stock": 5
+  },
+  {
+    "id": 26,
+    "title": "Air Fryer Philips HD9252",
+    "code": "AIRFR-026",
+    "category": "Rumah Tangga",
+    "brand": "Philips",
+    "price": 1799000,
+    "stock": 18
+  },
+  {
+    "id": 27,
+    "title": "Setrika Uap Panasonic NI-FS770",
+    "code": "PANFS-027",
+    "category": "Rumah Tangga",
+    "brand": "Panasonic",
+    "price": 899000,
+    "stock": 15
+  },
+  {
+    "id": 28,
+    "title": "Blender Miyako BL-108",
+    "code": "MIYBL-028",
+    "category": "Rumah Tangga",
+    "brand": "Miyako",
+    "price": 459000,
+    "stock": 28
+  },
+  {
+    "id": 29,
+    "title": "Dispenser Aqua A100",
+    "code": "AQUA1-029",
+    "category": "Rumah Tangga",
+    "brand": "Aqua",
+    "price": 1099000,
+    "stock": 12
+  },
+  {
+    "id": 30,
+    "title": "Kipas Angin Dinding Maspion DF-36",
+    "code": "MASDF-030",
+    "category": "Rumah Tangga",
+    "brand": "Maspion",
+    "price": 349000,
+    "stock": 42
+  }
+]
