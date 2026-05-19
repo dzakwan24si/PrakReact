@@ -5,6 +5,7 @@ import { RiCustomerServiceFill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import Orders from "../pages/Orders";
 import { AiOutlineProduct } from "react-icons/ai";
+import { LuComponent } from "react-icons/lu";
 
 export default function Sidebar() {
   const menuClass = ({ isActive }) =>
@@ -59,6 +60,14 @@ export default function Sidebar() {
               className={menuClass}
             >
               <AiOutlineProduct className="mr-4 text-xl" /> Produk
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/components"
+              className={menuClass}
+            >
+              <LuComponent className="mr-4 text-xl" /> Components
             </NavLink>
           </li>
 

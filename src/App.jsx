@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Component, Suspense, useState } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/tailwind.css";
@@ -14,6 +14,7 @@ const Sidebar = React.lazy(() => import("./components/Sidebar"))
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
 const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
 import Loading from "./components/Loading";
+const Components = React.lazy(() => import("./pages/Components"));
 const Products = React.lazy(() => import("./pages/Products"))
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/products" element={<Products/>} />
+            <Route path="/components" element={<Components/>} />
             <Route path="/products/:id" element={<ProductDetail />} /> 
             <Route path="/400" element={<ErrorPage kodeError="400" deskripsiError="Bad Request - Permintaan Tidak Valid"  />} />
             <Route path="/401" element={<ErrorPage kodeError="401" deskripsiError="Unauthorized - Anda Belum Login"  />} />
