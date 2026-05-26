@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa";
-import { MdSpaceDashboard } from "react-icons/md";
+import { MdOutlineFeaturedPlayList, MdSpaceDashboard } from "react-icons/md";
 import { IoIosList } from "react-icons/io";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
@@ -68,6 +68,14 @@ export default function Sidebar() {
               className={menuClass}
             >
               <LuComponent className="mr-4 text-xl" /> Components
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/fitur-xyz"
+              className={menuClass}
+            >
+              <MdOutlineFeaturedPlayList className="mr-4 text-xl" /> Fitur XYZ
             </NavLink>
           </li>
 

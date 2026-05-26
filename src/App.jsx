@@ -14,6 +14,7 @@ const Sidebar = React.lazy(() => import("./components/Sidebar"))
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
 const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
 import Loading from "./components/Loading";
+const FiturXyz = React.lazy(() => import("./pages/FiturXyz"));
 const Components = React.lazy(() => import("./pages/Components"));
 const Products = React.lazy(() => import("./pages/Products"))
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
+            <Route path="/fitur-xyz" element={<FiturXyz />} />
             <Route path="/products" element={<Products/>} />
             <Route path="/components" element={<Components/>} />
             <Route path="/products/:id" element={<ProductDetail />} /> 
