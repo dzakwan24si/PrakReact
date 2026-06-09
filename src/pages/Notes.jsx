@@ -5,7 +5,7 @@ import AlertBox from "@/components/AlertBox";
 import GenericTable from "@/components/GenericTable";
 import EmptyState from "@/components/EmptyState";
 import LoadingSpinner from "@/components/LoadingSpinner";
-import { AiFillDelete } from "react-icons/ai";
+import { Button } from "@/components/ui/button";
 
 export default function Notes() {
     const [loading, setLoading] = useState(false)
@@ -140,15 +140,11 @@ export default function Notes() {
                         duration-200 resize-none"
                 />
 
-                <button
-                    type="submit"
-                    className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold
-                        rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500
-                        focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed
-                        transition-all duration-200 shadow-lg"
+                <Button
+                    variant="outline"
                 >
                     {loading ? "Mohon Tunggu..." : "Tambah Data"}
-                </button>
+                </Button>
             </form>
             {error && <AlertBox type="error">{error}</AlertBox>}
 	
@@ -193,13 +189,9 @@ export default function Notes() {
                         </div>
                     </td>
                     <td className="px-6 py-4">
-                        <button
-                            onClick={() => handleDelete(note.id)}
-                            disabled={loading}
-                            className="text-red-400 hover:text-red-600 transition-colors"
-                        >
-                            <AiFillDelete className="text-2xl" />
-                        </button>
+                        <Button type="danger" variant="destructive" onClick={() => handleDelete(note.id)} disabled={loading}>
+                            Hapus
+                        </Button>
                     </td>
                 </>
             )}
