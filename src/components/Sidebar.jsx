@@ -6,6 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import Orders from "../pages/Orders";
 import { AiOutlineProduct } from "react-icons/ai";
 import { LuComponent } from "react-icons/lu";
+import { CiStickyNote } from "react-icons/ci";
 
 export default function Sidebar() {
   const menuClass = ({ isActive }) =>
@@ -76,6 +77,14 @@ export default function Sidebar() {
               className={menuClass}
             >
               <MdOutlineFeaturedPlayList className="mr-4 text-xl" /> Fitur XYZ
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/notes"
+              className={menuClass}
+            >
+              <CiStickyNote className="mr-4 text-xl" /> Notes
             </NavLink>
           </li>
 

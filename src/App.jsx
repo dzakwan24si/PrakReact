@@ -14,6 +14,7 @@ const Sidebar = React.lazy(() => import("./components/Sidebar"))
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
 const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
 import Loading from "./components/Loading";
+const Notes = React.lazy(() => import("./pages/Notes"));
 const FiturXyz = React.lazy(() => import("./pages/FiturXyz"));
 const Components = React.lazy(() => import("./pages/Components"));
 const Products = React.lazy(() => import("./pages/Products"))
@@ -31,6 +32,7 @@ function App() {
             <Route path="/products" element={<Products/>} />
             <Route path="/components" element={<Components/>} />
             <Route path="/products/:id" element={<ProductDetail />} /> 
+            <Route path="/notes" element={<Notes />} />
             <Route path="/400" element={<ErrorPage kodeError="400" deskripsiError="Bad Request - Permintaan Tidak Valid"  />} />
             <Route path="/401" element={<ErrorPage kodeError="401" deskripsiError="Unauthorized - Anda Belum Login"  />} />
             <Route path="/403" element={<ErrorPage kodeError="403" deskripsiError="Forbidden - Akses Ditolak"/>} />
